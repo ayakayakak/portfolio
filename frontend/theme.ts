@@ -2,7 +2,8 @@ import 'styled-components'
 
 export const theme = {
   black: '#333',
-  background: '#f7f7f7',
+  white: '#fff',
+  backgroundGray: '#f7f7f7',
 } as const
 
 type Theme = typeof theme

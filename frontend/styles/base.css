@@ -155,7 +155,7 @@ textarea {
 
 textarea:focus {
   outline: 0;
-  border: 1px solid #222;
+  border: 1px solid #333;
 }
 
 select {
@@ -231,7 +231,7 @@ body {
   /* 標準サイズで10px 以降はremで */
   font-size: 62.5%;
   font-weight: 400;
-  color: #222;
+  color: #333;
   background: #fff;
   -webkit-text-size-adjust: 100%;
   position: relative;

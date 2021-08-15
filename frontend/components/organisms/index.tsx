@@ -3,7 +3,9 @@
  */
 
 import { Header } from './header'
+import { Top } from './top'
 
 export {
-  Header
+  Header,
+  Top
 }

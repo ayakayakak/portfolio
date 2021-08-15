@@ -23,6 +23,10 @@ const GlobalStyle = createGlobalStyle`
       display: none;
     `}
   }
+
+  main {
+    margin: 65px 0 0 0;
+  }
 `
 
 const App: NextPage<AppProps> = ({ Component, pageProps }: AppProps) => {

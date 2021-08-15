@@ -1,12 +1,17 @@
 import type { NextPage } from 'next'
 
 /* components */
-import { Header } from 'components/organisms'
+import { Header, Top } from 'components/organisms'
 
 const Home: NextPage = () => {
   return (
+    <>
     <Header onClick={()=>{}} />
+    <main>
 
+      <Top />
+    </main>
+    </>
   )
 }
 

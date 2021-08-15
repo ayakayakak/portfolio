@@ -10,7 +10,7 @@ type Props = {
 
 const Wrapper = styled.li`
   padding: 5px 0;
-  font-size: 1.3rem;
+  font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.05em;
   position: relative;

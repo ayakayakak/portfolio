@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   main {
-    margin: 65px 0 0 0;
+    margin-top: 65px;
   }
 `
 

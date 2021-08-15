@@ -252,37 +252,11 @@ textarea::placeholder {
   font-weight: 400;
 }
 
-.wrapper {
-  width: 1440px;
-  max-width: 100%;
-  margin: 0 auto 44px;
-  padding: 56px 0 44px;
-}
-
-.content {
-  width: 668px;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 24px;
-  position: relative;
-}
-
 @media screen and (max-width: 768px) {
 
   html,
   body {
     /* 標準サイズでデザイン上の10px 以降はremで */
     font-size: 2.666vw;
-  }
-
-  .wrapper {
-    width: 100%;
-    margin: 52px 0 0 0;
-    padding: 0;
-  }
-
-  .content {
-    width: 100%;
-    padding: 0;
   }
 }

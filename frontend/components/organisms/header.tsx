@@ -26,7 +26,7 @@ const Wrapper = styled.header`
     box-shadow: 0 5px 10px -6px rgb(0 0 0 / 10%);
 
     .to-top {
-      font-size: 20px;
+      font-size: 25px;
       font-weight: bold;
       line-height: 1.2;
       letter-spacing: 0.05em;

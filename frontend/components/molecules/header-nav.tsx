@@ -5,6 +5,9 @@ import styled from 'styled-components'
 /* components */
 import { HeaderNavItem } from 'components/atoms'
 
+/* lib */
+import { sectionList } from 'lib/section-list'
+
 type Props = {
   className?: string
   onClick: () => void
@@ -24,10 +27,7 @@ const Wrapper = styled.nav`
 `
 
 export const HeaderNav: NextComponentType<NextPageContext, null, Props> = ({ className = '', onClick }) => {
-  const sectionList = [
-    {label: "WORKS", value: "WORKS"},
-    {label: "ABOUT", value: "ABOUT"},
-    {label: "CONTACT", value: "CONTACT"}]
+
 
   return (
     <Wrapper className={className}>

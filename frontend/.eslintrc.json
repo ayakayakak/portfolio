@@ -1,3 +1,49 @@
 {
-  "extends": "next/core-web-vitals"
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "jest/globals": true
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "jest",
+    "prettier",
+    "react-hooks"
+  ],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": 0,
+    "@typescript-eslint/camelcase": 0,
+    "@typescript-eslint/ban-ts-comment": 0,
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowExpressions": true
+      }
+    ],
+    "@typescript-eslint/no-empty-function": [
+      "error",
+      {
+        "allow": ["arrowFunctions"]
+      }
+    ]
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }

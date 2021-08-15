@@ -29,7 +29,7 @@ const App: NextPage<AppProps> = ({ Component, pageProps }: AppProps) => {
   return (
     <ThemeProvider theme={Theme.theme}>
       <GlobalStyle theme={Theme.theme} />
-        <Component {...pageProps} />
+      <Component {...pageProps} />
     </ThemeProvider>
   )
 }

@@ -5,12 +5,13 @@ import styled from 'styled-components'
 /* components */
 import { HeaderNavItem } from 'components/atoms'
 
-/* lib */
+/* lib, types */
 import { sectionList } from 'lib/section-list'
+import {SectionList} from 'types/myTypes'
 
 type Props = {
   className?: string
-  onClick: () => void
+  onClick: (text: SectionList) => void
 }
 
 const Wrapper = styled.nav`

@@ -6,7 +6,7 @@ import { Header, SectionContainer, Top,About,Skill  } from 'components/organisms
 const Home: NextPage = () => {
   return (
     <>
-    <Header onClick={()=>{}} />
+    <Header/>
     <main>
       <Top />
 

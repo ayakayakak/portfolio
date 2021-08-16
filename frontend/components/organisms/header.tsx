@@ -6,9 +6,11 @@ import styled from 'styled-components'
 /* components */
 import { HeaderNav } from 'components/molecules'
 
+/* types */
+import {SectionList} from 'types/myTypes'
+
 type Props = {
   className?: string
-  onClick: () => void
 }
 
 const Wrapper = styled.header`
@@ -18,30 +20,27 @@ const Wrapper = styled.header`
     padding: 20px 40px;
     background: ${(props): string => (props.theme.white)};
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     z-index: 1;
     position: fixed;
     top: 0;
     box-shadow: 0 5px 10px -6px rgb(0 0 0 / 10%);
-
-    .to-top {
-      font-size: 25px;
-      font-weight: bold;
-      line-height: 1.2;
-      letter-spacing: 0.05em;
-      cursor: pointer;
-    }
   }
 `
 
-export const Header: NextComponentType<NextPageContext, null, Props> = ({ className = '', onClick }) => {
+export const Header: NextComponentType<NextPageContext, null, Props> = ({ className = '' }) => {
+  const onClickNavItem = (text:SectionList)=> {
+    const targetY = document.getElementById(text.toLowerCase())?.getBoundingClientRect().top ?? 0
+    const HEADER_HEIGHT = 65
+    const BUFFER = 80
+    window.scrollTo({top: window.pageYOffset + targetY - HEADER_HEIGHT - BUFFER, behavior:'smooth'})
+  }
+
   return (
     <Wrapper className={className}>
       <div className="inner">
-      <Link href={'/'}>
-   <span className="to-top">Ayaka Taniguchi</span></Link>
-        <HeaderNav onClick={onClick}/>
+        <HeaderNav onClick={onClickNavItem}/>
       </div>
     </Wrapper>
   )

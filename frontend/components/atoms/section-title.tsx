@@ -15,7 +15,7 @@ const Wrapper = styled.h1`
 
 export const SectionTitle: NextComponentType<NextPageContext, null, Props> = ({ className = '',title }) => {
   return (
-    <Wrapper className={className}>
+    <Wrapper className={className} id={title.toLowerCase()}>
       {title}
     </Wrapper>
   )

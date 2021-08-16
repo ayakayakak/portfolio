@@ -2,10 +2,13 @@ import React from 'react'
 import { NextComponentType, NextPageContext } from 'next'
 import styled from 'styled-components'
 
+/* types */
+import {SectionList} from 'types/myTypes'
+
 type Props = {
   className?: string
-  text: string
-  onClick: () => void
+  text: SectionList
+  onClick: (text: SectionList) => void
 }
 
 const Wrapper = styled.li`
@@ -37,7 +40,7 @@ const Wrapper = styled.li`
 
 export const HeaderNavItem: NextComponentType<NextPageContext, null, Props> = ({ className = '',text, onClick }) => {
   return (
-    <Wrapper className={className}>
+    <Wrapper className={className} onClick={()=>onClick(text)}>
       {text}
     </Wrapper>
   )

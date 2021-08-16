@@ -5,10 +5,20 @@ import Head from 'next/head'
 import { Header, SectionContainer, Top, About, Skill, Contact } from 'components/organisms'
 
 const Home: NextPage = () => {
+  /* eslint-disable-next-line @typescript-eslint/no-var-requires */
+  const ogpImg = require('./../../public/profile.jpg')
   return (
     <>
       <Head>
         <title>Ayaka Taniguchi</title>
+        <meta property="og:title" content="Ayaka Taniguchi" />
+        <meta property="og:description" content="Ayaka Taniguchi's Portfolio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ayakatani.com/" />
+        <meta property="og:image" content={ogpImg} />
+        <meta property="og:site_name" content="Ayaka Taniguchi" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@ayakayakayakak" />
       </Head>
 
       <Header />

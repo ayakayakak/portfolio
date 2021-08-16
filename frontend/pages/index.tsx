@@ -4,20 +4,21 @@ import Head from 'next/head'
 /* components */
 import { Header, SectionContainer, Top, About, Skill, Contact } from 'components/organisms'
 
+/* const */
+import { APP_NAME, APP_URL, META_DESCRIPTION } from 'const'
+
 const Home: NextPage = () => {
-  /* eslint-disable-next-line @typescript-eslint/no-var-requires */
-  const ogpImg = require('./../public/top.jpg')
   return (
     <>
       <Head>
         <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#" />
         <title>Ayaka Taniguchi</title>
-        <meta property="og:title" content="Ayaka Taniguchi" />
-        <meta property="og:description" content="Ayaka Taniguchi's Portfolio" />
+        <meta property="og:title" content={APP_NAME} />
+        <meta property="og:description" content={META_DESCRIPTION} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ayakatani.com/" />
-        <meta property="og:image" content={ogpImg} />
-        <meta property="og:site_name" content="Ayaka Taniguchi" />
+        <meta property="og:url" content={APP_URL} />
+        <meta property="og:image" content={APP_URL + '/profile.jpg'} />
+        <meta property="og:site_name" content={APP_NAME} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@ayakayakayakak" />
       </Head>

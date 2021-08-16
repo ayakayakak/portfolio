@@ -13,12 +13,12 @@ type Props = {
 const StyledButton = styled.button<Props>`
   width: 100%;
   height: auto;
-  font-size: 1.4rem;
+  font-size: 14px;
   border: 1px solid ${(props): string => props.theme.black};
   border-radius: 2rem;
   color: ${(props): string => props.theme.black};
   text-align: center;
-  line-height: 4rem;
+  line-height: 40px;
   transition: 0.3s all;
   display: block;
 

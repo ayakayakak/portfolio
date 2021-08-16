@@ -7,6 +7,7 @@ import { SectionTitle } from 'components/atoms'
 
 /* lib */
 import { sectionList } from 'lib/section-list'
+import { mediaTablet, mediaSp } from 'lib/media-query'
 
 type Props = {
   className?: string
@@ -25,6 +26,15 @@ const Wrapper = styled.div<StyleProps>`
   .title {
     margin-bottom: 40px;
     text-align: center;
+  }
+
+  ${mediaSp`
+    padding: 50px 20px;
+
+    .title {
+      margin-bottom: 3rem;
+    }
+  `
   }
 `
 

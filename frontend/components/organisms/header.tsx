@@ -5,8 +5,9 @@ import styled from 'styled-components'
 /* components */
 import { HeaderNav } from 'components/molecules'
 
-/* types */
+/* lib, types */
 import { SectionList } from 'types/myTypes'
+import { mediaSp, mediaTablet } from 'lib/media-query'
 
 type Props = {
   className?: string
@@ -25,6 +26,13 @@ const Wrapper = styled.header`
     position: fixed;
     top: 0;
     box-shadow: 0 5px 10px -6px rgb(0 0 0 / 10%);
+  }
+
+  ${mediaSp`
+    .inner {
+      padding: 20px;
+    }
+  `
   }
 `
 

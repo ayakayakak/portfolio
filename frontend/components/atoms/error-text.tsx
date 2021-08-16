@@ -2,6 +2,9 @@ import React from 'react'
 import { NextComponentType, NextPageContext } from 'next'
 import styled from 'styled-components'
 
+/* lib */
+import { mediaTablet, mediaSp } from 'lib/media-query'
+
 type Props = {
   className?: string
   text: string | null
@@ -10,8 +13,13 @@ type Props = {
 const StyledErrorText = styled.p`
   height: 18px;
   color: ${(props): string => props.theme.error};
-  font-size: 1.2rem;
+  font-size: 12px;
   text-align: left;
+
+  ${mediaSp`
+    font-size: 1.2rem;
+  `
+  }
 `
 
 export const ErrorText: NextComponentType<NextPageContext, null, Props> = ({ className = '', text = '' }) => {

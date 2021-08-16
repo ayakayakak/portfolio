@@ -5,6 +5,9 @@ import styled from 'styled-components'
 /* components */
 import { SkillItem } from 'components/molecules'
 
+/* lib */
+import { mediaSpForSkill } from 'lib/media-query'
+
 type Props = {
   className?: string
 }
@@ -12,7 +15,6 @@ type Props = {
 const Wrapper = styled.div`
   > div {
     width: 100%;
-    padding-left: 20px;
     border-bottom: 1px solid ${(props): string => props.theme.borderGray};
     display: flex;
     flex-wrap: wrap;
@@ -24,6 +26,13 @@ const Wrapper = styled.div`
 
   .skill-item {
     margin-bottom: 20px;
+  }
+
+  ${mediaSpForSkill`
+    .skill-item {
+      margin-bottom: 0;
+    }
+  `
   }
 `
 

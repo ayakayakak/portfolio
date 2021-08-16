@@ -23,7 +23,7 @@ const StyledTextarea = styled.textarea<Props>`
   border-radius: 4px;
   background: ${(props): string => props.theme.white};
   color: ${(props): string => props.theme.black};
-  font-size: 1.6rem;
+  font-size: 16px;
   line-height: 1.75;
   border: 1px solid ${(props): string => (props.error ? props.theme.error : props.theme.borderGray)};
   transition: 0.3s all;

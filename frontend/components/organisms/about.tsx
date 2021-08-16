@@ -2,12 +2,15 @@ import React from 'react'
 import { NextComponentType, NextPageContext } from 'next'
 import styled from 'styled-components'
 
+/* lib */
+import { mediaSp, mediaTablet } from 'lib/media-query'
+
 type Props = {
   className?: string
 }
 
 const Wrapper = styled.div`
-  max-width: 830px;
+  max-width: 100%;
   width: 830px;
   margin: 0 auto;
   display: flex;
@@ -26,7 +29,25 @@ const Wrapper = styled.div`
   }
 
   .profile {
+    max-width: calc(100% - 235px);
     font-size: 17px;
+    word-break: break-all;
+  }
+
+  ${mediaTablet`
+    width: 80%;
+    display: block;
+
+    .image-wrapper {
+      width: 10rem;
+      height: 10rem;
+      margin: 0 auto 2rem;
+    }
+
+    .profile {
+      max-width: 100%;
+    }
+  `
   }
 `
 

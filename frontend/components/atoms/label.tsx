@@ -12,7 +12,7 @@ type Props = {
 
 const StyledLabel = styled.label`
   color: ${(props): string => props.theme.black};
-  font-size: 1.6rem;
+  font-size: 16px;
 
   ${mediaSp`
     font-size: 1.4rem;

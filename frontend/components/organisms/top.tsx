@@ -2,6 +2,9 @@ import React from 'react'
 import { NextComponentType, NextPageContext } from 'next'
 import styled from 'styled-components'
 
+/* lib */
+import { mediaTablet } from 'lib/media-query'
+
 type Props = {
   className?: string
 }
@@ -11,13 +14,13 @@ const Wrapper = styled.div`
   height: 85vh;
   position: relative;
 
-  img {
+  >img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  p {
+  >p {
     color: ${(props): string => props.theme.white};
     font-size: 70px;
     font-weight: bold;
@@ -29,6 +32,17 @@ const Wrapper = styled.div`
     position: absolute;
     bottom: 50px;
     left: 40px;
+  }
+
+  ${mediaTablet`
+    height: auto;
+
+    >p {
+      font-size: 2rem;
+      bottom: 10%;
+      left: 8%;
+    }
+  `
   }
 `
 

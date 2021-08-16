@@ -2,8 +2,9 @@ import React from 'react'
 import { NextComponentType, NextPageContext } from 'next'
 import styled from 'styled-components'
 
-/* types */
+/* lib, types */
 import { SectionList } from 'types/myTypes'
+import { mediaTablet } from 'lib/media-query'
 
 type Props = {
   className?: string
@@ -35,6 +36,11 @@ const Wrapper = styled.li`
       width: 100%;
       left: 0;
     }
+  }
+
+  ${mediaTablet`
+    font-size: 14px;
+  `
   }
 `
 

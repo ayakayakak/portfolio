@@ -5,6 +5,9 @@ import styled from 'styled-components'
 /* components */
 import { SkillLevel } from 'components/molecules'
 
+/* lib */
+import { mediaMiniPcForSkill, mediaTabletForSkill, mediaSpForSkill } from 'lib/media-query'
+
 type Props = {
   className?: string
   iconSrc: string
@@ -52,6 +55,22 @@ const Wrapper = styled.div`
       padding-left: 10px;
     }
   }
+
+  ${mediaMiniPcForSkill`
+    width: 33%;
+  `}
+
+  ${mediaTabletForSkill`
+    width: 50%;
+  `}
+
+  ${mediaSpForSkill`
+    width: 100%;
+
+    .inner {
+      width: 250px;
+    }
+  `}
 `
 
 export const SkillItem: NextComponentType<NextPageContext, null, Props> = ({ className = '', iconSrc, iconAlt, title, level }) => {

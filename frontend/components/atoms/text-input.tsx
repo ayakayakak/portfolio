@@ -27,8 +27,8 @@ const StyledInput = styled.input<Props>`
   border-radius: 4px;
   background: ${(props): string => props.theme.white};
   color: ${(props): string => props.theme.black};
-  font-size: 1.6rem;
-  line-height: 4.4rem;
+  font-size: 16px;
+  line-height: 44px;
   transition: 0.3s all;
   box-sizing: border-box;
 

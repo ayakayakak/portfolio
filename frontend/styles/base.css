@@ -252,8 +252,7 @@ textarea::placeholder {
   font-weight: 400;
 }
 
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 1024px) {
   html,
   body {
     /* 標準サイズでデザイン上の10px 以降はremで */

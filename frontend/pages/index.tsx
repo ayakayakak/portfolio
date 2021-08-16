@@ -6,7 +6,7 @@ import { Header, SectionContainer, Top, About, Skill, Contact } from 'components
 
 const Home: NextPage = () => {
   /* eslint-disable-next-line @typescript-eslint/no-var-requires */
-  const ogpImg = require('./../../public/profile.jpg')
+  const ogpImg = require('./../public/profile.jpg')
   return (
     <>
       <Head>

@@ -10,6 +10,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
+        <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#" />
         <title>Ayaka Taniguchi</title>
         <meta property="og:title" content="Ayaka Taniguchi" />
         <meta property="og:description" content="Ayaka Taniguchi's Portfolio" />

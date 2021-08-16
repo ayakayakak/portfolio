@@ -19,7 +19,7 @@ type StyleProps = {
 
 const Wrapper = styled.div<StyleProps>`
   width: 100%;
-  padding: 90px 40px;
+  padding: 90px 60px;
   background: ${(props): string => (props.index % 2 === 0 ? props.theme.white: props.theme.backgroundGray)};
 
   .title {

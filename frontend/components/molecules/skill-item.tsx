@@ -13,24 +13,24 @@ type Props = {
 }
 
 const Wrapper = styled.div`
-  width: 33%;
-  min-width: 320px;
+  width: 25%;
+  min-width: 230px;
   
   .inner {
-    width: 290px;
-    height: 150px;
+    width: 230px;
+    height: 100px;
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
   }
 
   .left-column {
-    width: 100px;
+    width: 80px;
     height: 100%;
-    margin-right: 20px;
     position: relative;
 
     .icon {
-      width: 80px;
+      width: 50px;
       position: absolute;
       top: 50%;
       left: 50%;

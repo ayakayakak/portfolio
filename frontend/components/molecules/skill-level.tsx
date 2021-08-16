@@ -8,13 +8,13 @@ type Props = {
 }
 
 const Wrapper = styled.div`
-  width: 190px;
+  width: 140px;
   margin: 0 auto;
   display: flex;
+  justify-content: space-between;
 
   img{
-    width: 30px;
-    margin-right: 10px;
+    width: 20px;
 
     &:last-child {
       margin-right: 0;

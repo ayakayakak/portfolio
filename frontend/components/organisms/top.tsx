@@ -21,7 +21,7 @@ const Wrapper = styled.div`
     color: ${(props): string => (props.theme.white)};
     font-size: 70px;
     font-weight: bold;
-    font-family: 'Style Script', cursive,"Roboto", "Noto Sans JP", Hiragino Sans, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, sans-serif;
+    font-family: 'Lobster', cursive,"Roboto", "Noto Sans JP", Hiragino Sans, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, sans-serif;
     font-style: italic;
     line-height: 1.2;
     letter-spacing: 0.1em;

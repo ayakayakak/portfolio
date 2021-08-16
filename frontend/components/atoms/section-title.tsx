@@ -8,7 +8,7 @@ type Props = {
 }
 
 const Wrapper = styled.h1`
-  font-size: 60px;
+  font-size: 34px;
   font-weight: bold;
   letter-spacing: 0.1em;
 `

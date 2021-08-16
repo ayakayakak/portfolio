@@ -7,7 +7,7 @@ import { HeaderNav } from 'components/molecules'
 
 /* lib, types */
 import { SectionList } from 'types/myTypes'
-import { mediaSp, mediaTablet } from 'lib/media-query'
+import { mediaSp } from 'lib/media-query'
 
 type Props = {
   className?: string
@@ -32,8 +32,7 @@ const Wrapper = styled.header`
     .inner {
       padding: 20px;
     }
-  `
-  }
+  `}
 `
 
 export const Header: NextComponentType<NextPageContext, null, Props> = ({ className = '' }) => {

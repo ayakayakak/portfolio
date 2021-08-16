@@ -32,8 +32,7 @@ const Wrapper = styled.div`
     .skill-item {
       margin-bottom: 0;
     }
-  `
-  }
+  `}
 `
 
 export const Skill: NextComponentType<NextPageContext, null, Props> = ({ className = '' }) => {

@@ -3,7 +3,7 @@ import { NextComponentType, NextPageContext } from 'next'
 import styled from 'styled-components'
 
 /* lib */
-import { mediaSp, mediaTablet } from 'lib/media-query'
+import { mediaTablet } from 'lib/media-query'
 
 type Props = {
   className?: string
@@ -47,8 +47,7 @@ const Wrapper = styled.div`
     .profile {
       max-width: 100%;
     }
-  `
-  }
+  `}
 `
 
 export const About: NextComponentType<NextPageContext, null, Props> = ({ className = '' }) => {

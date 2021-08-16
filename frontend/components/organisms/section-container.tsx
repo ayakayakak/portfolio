@@ -7,7 +7,7 @@ import { SectionTitle } from 'components/atoms'
 
 /* lib */
 import { sectionList } from 'lib/section-list'
-import { mediaTablet, mediaSp } from 'lib/media-query'
+import { mediaSp } from 'lib/media-query'
 
 type Props = {
   className?: string
@@ -34,8 +34,7 @@ const Wrapper = styled.div<StyleProps>`
     .title {
       margin-bottom: 3rem;
     }
-  `
-  }
+  `}
 `
 
 export const SectionContainer: NextComponentType<NextPageContext, null, Props & StyleProps> = ({ className = '', children, index }) => {

@@ -7,7 +7,7 @@ import { Button, ErrorText, SnsIcon } from 'components/atoms'
 import { TextInputWithLabel, TextAreaWithLabel } from 'components/molecules'
 
 /* lib*/
-import { mediaSp, mediaTablet } from 'lib/media-query'
+import { mediaTablet } from 'lib/media-query'
 
 type Props = {
   className?: string
@@ -38,8 +38,7 @@ const Wrapper = styled.div`
     .send {
       width: 100%;
     }
-  `
-  }
+  `}
 `
 
 const FormItemWrapper = styled.div`
@@ -52,8 +51,7 @@ const FormItemWrapper = styled.div`
 
   ${mediaTablet`
     width: 100%;
-  `
-  }
+  `}
 `
 
 export const Contact: NextComponentType<NextPageContext, null, Props> = ({ className = '' }) => {
@@ -91,7 +89,11 @@ export const Contact: NextComponentType<NextPageContext, null, Props> = ({ class
 
   return (
     <Wrapper className={className}>
-      <p>お仕事のご相談・ご質問等は<br className="sp"/>フォーム/SNSよりお気軽にお問合せ下さい。</p>
+      <p>
+        お仕事のご相談・ご質問等は
+        <br className="sp" />
+        フォーム/SNSよりお気軽にお問合せ下さい。
+      </p>
       <div className="sns-icon-wrapper">
         <SnsIcon src="/icon/twitter.png" alt="twitter" onClick={onClickTwitter} />
         <SnsIcon src="/icon/github.png" alt="github" onClick={onClickGithub} />

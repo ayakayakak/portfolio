@@ -40,8 +40,7 @@ const Wrapper = styled.li`
 
   ${mediaTablet`
     font-size: 14px;
-  `
-  }
+  `}
 `
 
 export const HeaderNavItem: NextComponentType<NextPageContext, null, Props> = ({ className = '', text, onClick }) => {

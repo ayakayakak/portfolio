@@ -3,7 +3,7 @@ import { NextComponentType, NextPageContext } from 'next'
 import styled from 'styled-components'
 
 /* lib */
-import { mediaTablet, mediaSp } from 'lib/media-query'
+import { mediaSp } from 'lib/media-query'
 
 type Props = {
   className?: string
@@ -18,8 +18,7 @@ const StyledErrorText = styled.p`
 
   ${mediaSp`
     font-size: 1.2rem;
-  `
-  }
+  `}
 `
 
 export const ErrorText: NextComponentType<NextPageContext, null, Props> = ({ className = '', text = '' }) => {

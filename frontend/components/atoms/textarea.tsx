@@ -28,6 +28,7 @@ const StyledTextarea = styled.textarea<Props>`
   border: 1px solid ${(props): string => (props.error ? props.theme.error : props.theme.borderGray)};
   transition: 0.3s all;
   box-sizing: border-box;
+  -webkit-appearance: none;
 
   &:focus {
     outline: 0;

@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 
 /* components */
-import { Header, SectionContainer, Top,About,Skill  } from 'components/organisms'
+import { Header, SectionContainer, Top,About,Skill,Contact  } from 'components/organisms'
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +16,10 @@ const Home: NextPage = () => {
 
       <SectionContainer index={1}>
         <Skill/>
+      </SectionContainer>
+
+      <SectionContainer index={2}>
+        <Contact/>
       </SectionContainer>
     </main>
     </>

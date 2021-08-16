@@ -5,6 +5,8 @@ export const theme = {
   white: '#fff',
   backgroundGray: '#f7f7f7',
   borderGray: '#ccc',
+  placeholderGray: '#ccc',
+  error: '#eb5757',
 } as const
 
 type Theme = typeof theme

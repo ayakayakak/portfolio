@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         <meta property="og:description" content={META_DESCRIPTION} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={APP_URL} />
-        <meta property="og:image" content={APP_URL + '/profile.jpg'} />
+        <meta property="og:image" content={APP_URL + '/top.jpg'} />
         <meta property="og:site_name" content={APP_NAME} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@ayakayakayakak" />

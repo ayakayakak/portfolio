@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Head from 'next/head'
 
 /* components */
 import { Header, SectionContainer, Top, About, Skill, Contact } from 'components/organisms'
@@ -6,6 +7,10 @@ import { Header, SectionContainer, Top, About, Skill, Contact } from 'components
 const Home: NextPage = () => {
   return (
     <>
+    <Head>
+      <title>Ayaka Taniguchi</title>
+    </Head>
+
       <Header />
       <main>
         <Top />

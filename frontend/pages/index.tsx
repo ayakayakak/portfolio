@@ -7,9 +7,9 @@ import { Header, SectionContainer, Top, About, Skill, Contact } from 'components
 const Home: NextPage = () => {
   return (
     <>
-    <Head>
-      <title>Ayaka Taniguchi</title>
-    </Head>
+      <Head>
+        <title>Ayaka Taniguchi</title>
+      </Head>
 
       <Header />
       <main>

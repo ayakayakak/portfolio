@@ -13,7 +13,7 @@ const Wrapper = styled.h1`
   letter-spacing: 0.1em;
 `
 
-export const SectionTitle: NextComponentType<NextPageContext, null, Props> = ({ className = '',title }) => {
+export const SectionTitle: NextComponentType<NextPageContext, null, Props> = ({ className = '', title }) => {
   return (
     <Wrapper className={className} id={title.toLowerCase()}>
       {title}

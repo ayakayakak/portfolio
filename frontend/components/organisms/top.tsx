@@ -18,10 +18,11 @@ const Wrapper = styled.div`
   }
 
   p {
-    color: ${(props): string => (props.theme.white)};
+    color: ${(props): string => props.theme.white};
     font-size: 70px;
     font-weight: bold;
-    font-family: 'Lobster', cursive,"Roboto", "Noto Sans JP", Hiragino Sans, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, sans-serif;
+    font-family: 'Lobster', cursive, 'Roboto', 'Noto Sans JP', Hiragino Sans, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ',
+      Meiryo, Osaka, sans-serif;
     font-style: italic;
     line-height: 1.2;
     letter-spacing: 0.1em;
@@ -34,7 +35,7 @@ const Wrapper = styled.div`
 export const Top: NextComponentType<NextPageContext, null, Props> = ({ className = '' }) => {
   return (
     <Wrapper className={className}>
-      <img src="/top.jpg" alt="top"/>
+      <img src="/top.jpg" alt="top" />
       <p>Ayaka Taniguchi</p>
     </Wrapper>
   )

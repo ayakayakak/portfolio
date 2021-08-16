@@ -7,7 +7,7 @@ import { HeaderNavItem } from 'components/atoms'
 
 /* lib, types */
 import { sectionList } from 'lib/section-list'
-import {SectionList} from 'types/myTypes'
+import { SectionList } from 'types/myTypes'
 
 type Props = {
   className?: string
@@ -28,13 +28,11 @@ const Wrapper = styled.nav`
 `
 
 export const HeaderNav: NextComponentType<NextPageContext, null, Props> = ({ className = '', onClick }) => {
-
-
   return (
     <Wrapper className={className}>
       <ul>
         {sectionList.map((section) => (
-          <HeaderNavItem text={section.label} onClick={onClick} className="nav-item" key={section.value}/>
+          <HeaderNavItem text={section.label} onClick={onClick} className="nav-item" key={section.value} />
         ))}
       </ul>
     </Wrapper>

@@ -1,14 +1,13 @@
 import React from 'react'
 import { NextComponentType, NextPageContext } from 'next'
-import styled, { ThemedStyledProps, DefaultTheme } from 'styled-components'
+import styled from 'styled-components'
 
 type Props = {
   className?: string
   src: string
   alt: string
-  onClick: ()=>void
+  onClick: () => void
 }
-
 
 const StyledButton = styled.div`
   width: 30px;
@@ -17,7 +16,7 @@ const StyledButton = styled.div`
   cursor: pointer;
   transition: 0.3s all;
 
-  >img {
+  > img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -30,10 +29,7 @@ const StyledButton = styled.div`
   }
 `
 
-export const SnsIcon: NextComponentType<NextPageContext, null, Props> = ({
-  className = '',
-  src,alt,onClick
-}) => {
+export const SnsIcon: NextComponentType<NextPageContext, null, Props> = ({ className = '', src, alt, onClick }) => {
   return (
     <StyledButton onClick={onClick} className={className}>
       <img src={src} alt={alt} />

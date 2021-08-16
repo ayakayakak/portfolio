@@ -2,9 +2,6 @@ import React from 'react'
 import { NextComponentType, NextPageContext } from 'next'
 import styled from 'styled-components'
 
-/* lib, types*/
-import { mediaSp } from 'lib/media-query'
-
 type Props = {
   className?: string
   text: string | null
@@ -18,9 +15,5 @@ const StyledErrorText = styled.p`
 `
 
 export const ErrorText: NextComponentType<NextPageContext, null, Props> = ({ className = '', text = '' }) => {
-  return (
-    <StyledErrorText className={className}>
-      {text}
-    </StyledErrorText>
-  )
+  return <StyledErrorText className={className}>{text}</StyledErrorText>
 }

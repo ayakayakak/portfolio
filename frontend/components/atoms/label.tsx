@@ -19,10 +19,6 @@ const StyledLabel = styled.label`
   `}
 `
 
-export const Label: NextComponentType<NextPageContext, null, Props> = ({ className = '', label}) => {
-  return (
-    <StyledLabel className={className}>
-      {label}
-    </StyledLabel>
-  )
+export const Label: NextComponentType<NextPageContext, null, Props> = ({ className = '', label }) => {
+  return <StyledLabel className={className}>{label}</StyledLabel>
 }

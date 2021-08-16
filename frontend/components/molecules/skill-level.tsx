@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
 
-  img{
+  img {
     width: 20px;
 
     &:last-child {
@@ -22,19 +22,15 @@ const Wrapper = styled.div`
   }
 `
 
-export const SkillLevel: NextComponentType<NextPageContext, null, Props> = ({ className = '',level }) => {
+export const SkillLevel: NextComponentType<NextPageContext, null, Props> = ({ className = '', level }) => {
   return (
     <Wrapper className={className}>
-      {
-        [...Array(level)].map((_,index) => (
-          <img src="/icon/star-on.png" key={index}/>
-        ))
-      }
-      {
-      [...Array(5-level)].map((_,index) => (
-        <img src="/icon/star-off.png" key={index}/>
-      ))
-      }
+      {[...Array(level)].map((_, index) => (
+        <img src="/icon/star-on.png" alt="star-on" key={index} />
+      ))}
+      {[...Array(5 - level)].map((_, index) => (
+        <img src="/icon/star-off.png" alt="star-off" key={index} />
+      ))}
     </Wrapper>
   )
 }

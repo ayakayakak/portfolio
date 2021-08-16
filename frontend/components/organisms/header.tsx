@@ -1,13 +1,12 @@
-import React, { useState, useContext } from 'react'
+import React from 'react'
 import { NextComponentType, NextPageContext } from 'next'
-import Link from 'next/link'
 import styled from 'styled-components'
 
 /* components */
 import { HeaderNav } from 'components/molecules'
 
 /* types */
-import {SectionList} from 'types/myTypes'
+import { SectionList } from 'types/myTypes'
 
 type Props = {
   className?: string
@@ -18,7 +17,7 @@ const Wrapper = styled.header`
     width: 100%;
     height: 65px;
     padding: 20px 40px;
-    background: ${(props): string => (props.theme.white)};
+    background: ${(props): string => props.theme.white};
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -30,17 +29,17 @@ const Wrapper = styled.header`
 `
 
 export const Header: NextComponentType<NextPageContext, null, Props> = ({ className = '' }) => {
-  const onClickNavItem = (text:SectionList)=> {
+  const onClickNavItem = (text: SectionList): void => {
     const targetY = document.getElementById(text.toLowerCase())?.getBoundingClientRect().top ?? 0
     const HEADER_HEIGHT = 65
     const BUFFER = 80
-    window.scrollTo({top: window.pageYOffset + targetY - HEADER_HEIGHT - BUFFER, behavior:'smooth'})
+    window.scrollTo({ top: window.pageYOffset + targetY - HEADER_HEIGHT - BUFFER, behavior: 'smooth' })
   }
 
   return (
     <Wrapper className={className}>
       <div className="inner">
-        <HeaderNav onClick={onClickNavItem}/>
+        <HeaderNav onClick={onClickNavItem} />
       </div>
     </Wrapper>
   )

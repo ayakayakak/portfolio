@@ -3,7 +3,7 @@ import { NextComponentType, NextPageContext } from 'next'
 import styled from 'styled-components'
 
 /* components */
-import {SectionTitle  } from 'components/atoms'
+import { SectionTitle } from 'components/atoms'
 
 /* lib */
 import { sectionList } from 'lib/section-list'
@@ -20,7 +20,7 @@ type StyleProps = {
 const Wrapper = styled.div<StyleProps>`
   width: 100%;
   padding: 90px 60px;
-  background: ${(props): string => (props.index % 2 === 0 ? props.theme.white: props.theme.backgroundGray)};
+  background: ${(props): string => (props.index % 2 === 0 ? props.theme.white : props.theme.backgroundGray)};
 
   .title {
     margin-bottom: 40px;
@@ -28,10 +28,10 @@ const Wrapper = styled.div<StyleProps>`
   }
 `
 
-export const SectionContainer: NextComponentType<NextPageContext, null, Props&StyleProps> = ({ className = '', children, index }) => {
+export const SectionContainer: NextComponentType<NextPageContext, null, Props & StyleProps> = ({ className = '', children, index }) => {
   return (
     <Wrapper className={className} index={index}>
-      <SectionTitle title={sectionList[index].label} className="title"/>
+      <SectionTitle title={sectionList[index].label} className="title" />
       {children}
     </Wrapper>
   )

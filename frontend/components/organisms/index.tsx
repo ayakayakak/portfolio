@@ -9,11 +9,4 @@ import { About } from './about'
 import { Skill } from './skill'
 import { Contact } from './contact'
 
-export {
-  Header,
-  Top,
-  SectionContainer,
-  About,
-  Skill,
-  Contact
-}
+export { Header, Top, SectionContainer, About, Skill, Contact }

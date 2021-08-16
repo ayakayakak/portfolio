@@ -1,6 +1,6 @@
 import React from 'react'
 import { NextComponentType, NextPageContext } from 'next'
-import styled, { ThemedStyledProps, DefaultTheme } from 'styled-components'
+import styled from 'styled-components'
 
 type Props = {
   className?: string
@@ -9,7 +9,6 @@ type Props = {
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
   children?: React.ReactNode
 }
-
 
 const StyledButton = styled.button<Props>`
   width: 100%;
@@ -28,12 +27,7 @@ const StyledButton = styled.button<Props>`
   }
 `
 
-export const Button: NextComponentType<NextPageContext, null, Props> = ({
-  className = '',
-  value,
-  children,
-  onClick,
-}) => {
+export const Button: NextComponentType<NextPageContext, null, Props> = ({ className = '', value, children, onClick }) => {
   return (
     <StyledButton value={value} onClick={onClick} className={className}>
       {children}

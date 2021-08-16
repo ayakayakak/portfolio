@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { NextComponentType, NextPageContext } from 'next'
 import styled from 'styled-components'
 
 /* components */
 import { Button, ErrorText, SnsIcon } from 'components/atoms'
-import { TextInputWithLabel, TextAreaWithLabel  } from 'components/molecules'
+import { TextInputWithLabel, TextAreaWithLabel } from 'components/molecules'
 
 type Props = {
   className?: string
@@ -13,7 +13,7 @@ type Props = {
 const Wrapper = styled.div`
   width: 100%;
 
-  >p {
+  > p {
     margin-bottom: 30px;
     font-size: 17px;
     text-align: center;
@@ -49,37 +49,37 @@ export const Contact: NextComponentType<NextPageContext, null, Props> = ({ class
   const [isEmailEmpty, setIsEmailEmpty] = useState<boolean>(false)
   const [isBodyEmpty, setIsBodyEmpty] = useState<boolean>(false)
 
-  const onClickTwitter = () => {
+  const onClickTwitter = (): void => {
     window.open('https://twitter.com/ayakayakayakak')
   }
 
-  const onClickGithub = () => {
+  const onClickGithub = (): void => {
     window.open('https://github.com/ayakayakak')
   }
 
-  const validation = () => {
-    if(!name) {
+  const validation = (): void => {
+    if (!name) {
       setIsNameEmpty(true)
     }
-    if(!email) {
+    if (!email) {
       setIsEmailEmpty(true)
     }
-    if(!body) {
+    if (!body) {
       setIsBodyEmpty(true)
     }
   }
 
-  const onSubmit = () => {
+  const onSubmit = (): void => {
     validation()
-    console.log("submit")
+    console.log('submit')
   }
 
   return (
     <Wrapper className={className}>
       <p>お仕事のご相談・ご質問等はフォーム/SNSよりお気軽にお問合せ下さい。</p>
       <div className="sns-icon-wrapper">
-        <SnsIcon src="/icon/twitter.png" alt="twitter" onClick={onClickTwitter}/>
-        <SnsIcon src="/icon/github.png" alt="github" onClick={onClickGithub}/>
+        <SnsIcon src="/icon/twitter.png" alt="twitter" onClick={onClickTwitter} />
+        <SnsIcon src="/icon/github.png" alt="github" onClick={onClickGithub} />
       </div>
       <FormItemWrapper>
         <TextInputWithLabel
@@ -88,7 +88,9 @@ export const Contact: NextComponentType<NextPageContext, null, Props> = ({ class
           value={name}
           placeholder="山田太郎"
           error={isNameEmpty}
-          onChange={(e)=>{setName(e.target.value)}}
+          onChange={(e) => {
+            setName(e.target.value)
+          }}
         />
         {isNameEmpty && <ErrorText text="お名前が入力されていません" />}
       </FormItemWrapper>
@@ -99,7 +101,9 @@ export const Contact: NextComponentType<NextPageContext, null, Props> = ({ class
           value={email}
           placeholder="example@gmail.com"
           error={isEmailEmpty}
-          onChange={(e)=>{setEmail(e.target.value)}}
+          onChange={(e) => {
+            setEmail(e.target.value)
+          }}
         />
         {isEmailEmpty && <ErrorText text="メールアドレスが入力されていません" />}
       </FormItemWrapper>
@@ -110,7 +114,9 @@ export const Contact: NextComponentType<NextPageContext, null, Props> = ({ class
           value={body}
           placeholder="お問い合わせ"
           error={isBodyEmpty}
-          onChange={(e)=>{setBody(e.target.value)}}
+          onChange={(e) => {
+            setBody(e.target.value)
+          }}
         />
         {isBodyEmpty && <ErrorText text="お問い合わせ内容が入力されていません" />}
       </FormItemWrapper>

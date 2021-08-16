@@ -3,11 +3,12 @@ import { NextComponentType, NextPageContext } from 'next'
 import styled from 'styled-components'
 
 /* components */
-import {SkillLevel  } from 'components/molecules'
+import { SkillLevel } from 'components/molecules'
 
 type Props = {
   className?: string
   iconSrc: string
+  iconAlt: string
   title: string
   level: number
 }
@@ -15,7 +16,7 @@ type Props = {
 const Wrapper = styled.div`
   width: 25%;
   min-width: 230px;
-  
+
   .inner {
     width: 230px;
     height: 100px;
@@ -51,23 +52,19 @@ const Wrapper = styled.div`
       padding-left: 10px;
     }
   }
-
 `
 
-export const SkillItem: NextComponentType<NextPageContext, null, Props> = ({ className = '',iconSrc,title, level }) => {
+export const SkillItem: NextComponentType<NextPageContext, null, Props> = ({ className = '', iconSrc, iconAlt, title, level }) => {
   return (
     <Wrapper className={className}>
       <div className="inner">
-
-      <div className="left-column">
-      <img src={iconSrc} className="icon"/>
-
-      </div>
-      <div className="right-column">
-      <p className="skill-name">{title}</p>
-        <SkillLevel level={level}/>
-
-      </div>
+        <div className="left-column">
+          <img src={iconSrc} alt={iconAlt} className="icon" />
+        </div>
+        <div className="right-column">
+          <p className="skill-name">{title}</p>
+          <SkillLevel level={level} />
+        </div>
       </div>
     </Wrapper>
   )

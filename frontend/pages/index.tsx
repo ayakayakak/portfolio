@@ -6,7 +6,7 @@ import { Header, SectionContainer, Top, About, Skill, Contact } from 'components
 
 const Home: NextPage = () => {
   /* eslint-disable-next-line @typescript-eslint/no-var-requires */
-  const ogpImg = require('./../public/profile.jpg')
+  const ogpImg = require('./../public/top.jpg')
   return (
     <>
       <Head>
@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         <meta property="og:url" content="https://ayakatani.com/" />
         <meta property="og:image" content={ogpImg} />
         <meta property="og:site_name" content="Ayaka Taniguchi" />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@ayakayakayakak" />
       </Head>
 

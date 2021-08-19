@@ -27,15 +27,16 @@ const Wrapper = styled.div`
       height: 100%;
     }
   }
-
-  .profile {
+  .profile-wrapper {
     max-width: calc(100% - 235px);
-    font-size: 17px;
-    word-break: break-all;
+    
+    .profile {
+      font-size: 17px;
+      word-break: break-all;
+    }
   }
 
   ${mediaTablet`
-    width: 80%;
     display: block;
 
     .image-wrapper {
@@ -44,8 +45,14 @@ const Wrapper = styled.div`
       margin: 0 auto 2rem;
     }
 
-    .profile {
+    .profile-wrapper{
       max-width: 100%;
+      text-align: center;
+      
+      .profile {
+        display: inline-block;
+        text-align: left;
+      }
     }
   `}
 `
@@ -56,6 +63,7 @@ export const About: NextComponentType<NextPageContext, null, Props> = ({ classNa
       <div className="image-wrapper">
         <img src="/profile.jpg" alt="profile" />
       </div>
+      <div className="profile-wrapper">
       <p className="profile">
         ■略歴
         <br />
@@ -85,6 +93,8 @@ export const About: NextComponentType<NextPageContext, null, Props> = ({ classNa
         <br />
         JavaSilver
       </p>
+
+      </div>
     </Wrapper>
   )
 }

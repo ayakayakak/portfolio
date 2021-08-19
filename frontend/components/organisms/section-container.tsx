@@ -29,7 +29,7 @@ const Wrapper = styled.div<StyleProps>`
   }
 
   ${mediaSp`
-    padding: 50px 10px;
+    padding: 50px 30px;
 
     .title {
       margin-bottom: 3rem;

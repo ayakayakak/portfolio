@@ -3,8 +3,7 @@ import { NextComponentType, NextPageContext } from 'next'
 import styled from 'styled-components'
 
 /* components */
-import { Button, ErrorText, SnsIcon,TextInput, Textarea } from 'components/atoms'
-import { TextInputWithLabel, TextAreaWithLabel } from 'components/molecules'
+import { Button, ErrorText, SnsIcon, TextInput, Textarea } from 'components/atoms'
 
 /* lib*/
 import { mediaTablet } from 'lib/media-query'
@@ -80,14 +79,14 @@ export const Contact: NextComponentType<NextPageContext, null, Props> = ({ class
     setEmailError(emailError)
     setBodyError(bodyError)
 
-    if(nameError || emailError || bodyError) return false
+    if (nameError || emailError || bodyError) return false
 
     return true
   }
 
   const submit = (): void => {
     onClickSubmit()
-    if(validate()) {
+    if (validate()) {
     }
   }
 

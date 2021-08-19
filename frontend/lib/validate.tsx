@@ -1,4 +1,4 @@
-export const validateRequired = (input: string): string | null  => {
+export const validateRequired = (input: string): string | null => {
   let message = null
 
   if (!input) {

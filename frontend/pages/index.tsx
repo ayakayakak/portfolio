@@ -13,12 +13,12 @@ import { FlashMessageType } from 'types/myTypes'
 const Home: NextPage = () => {
   const [flashMessageType, setFlashMessageType] = useState<FlashMessageType | null>(null)
 
-  const onClickSubmit = () => {
+  const onClickSubmit = (): void => {
     setFlashMessageType('success')
 
     setTimeout(() => {
       setFlashMessageType(null)
-    }, 3000);
+    }, 3000)
   }
 
   return (
@@ -49,7 +49,7 @@ const Home: NextPage = () => {
         </SectionContainer>
 
         <SectionContainer index={2}>
-          <Contact onClickSubmit={onClickSubmit}/>
+          <Contact onClickSubmit={onClickSubmit} />
         </SectionContainer>
       </main>
       <Footer />

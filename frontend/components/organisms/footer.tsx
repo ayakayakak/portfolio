@@ -68,15 +68,15 @@ const Wrapper = styled.footer`
 `
 
 export const Footer: NextComponentType<NextPageContext, null, Props> = ({ className = '' }) => {
-  const goToTop = () => {
-    window.scrollTo({top: 0, behavior: 'smooth'})
+  const goToTop = (): void => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
   return (
     <Wrapper className={className}>
       <div className="go-to-top" onClick={goToTop}>
         <div className="arrow" />
       </div>
-      <p className="copyright">&copy; Ayaka Taniguchi  All rights reserved.</p>
+      <p className="copyright">&copy; Ayaka Taniguchi All rights reserved.</p>
     </Wrapper>
   )
 }

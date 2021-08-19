@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NextComponentType, NextPageContext } from 'next'
 import styled, { ThemedStyledProps, DefaultTheme } from 'styled-components'
 
@@ -72,7 +72,7 @@ const Wrapper = styled.div<StyleProps>`
     border-radius: 50%;
     position: relative;
 
-    >img {
+    > img {
       width: 15px;
       position: absolute;
       top: 50%;
@@ -81,14 +81,13 @@ const Wrapper = styled.div<StyleProps>`
       -webkit-transform: translateY(-50%) translateX(-50%);
     }
   }
-  
-  >p {
+
+  > p {
     color: ${(props) => props.theme.white};
     font-size: 14px;
   }
 
-  ${
-    mediaSp`
+  ${mediaSp`
     width: 200px;
     height: 45px;
     padding: 0 15px;
@@ -122,26 +121,22 @@ const Wrapper = styled.div<StyleProps>`
 export const FlashMessage: NextComponentType<NextPageContext, null, Props> = ({ className = '', type }) => {
   return (
     <Wrapper className={className} type={type}>
-      {
-        type === 'success' && (
-          <>
-            <div className="icon-wrapper">
-            <img src="/icon/success.png" alt="success"/>
-            </div>
-            <p>Success!</p>
-          </>
-        )
-      }
-      {
-        type === 'fail' && (
-          <>
-            <div className="icon-wrapper">
-            <img src="/icon/fail.png" alt="fail"/>
-            </div>
-            <p>Failed!</p>
-          </>
-        )
-      }
+      {type === 'success' && (
+        <>
+          <div className="icon-wrapper">
+            <img src="/icon/success.png" alt="success" />
+          </div>
+          <p>Success!</p>
+        </>
+      )}
+      {type === 'fail' && (
+        <>
+          <div className="icon-wrapper">
+            <img src="/icon/fail.png" alt="fail" />
+          </div>
+          <p>Failed!</p>
+        </>
+      )}
     </Wrapper>
   )
 }

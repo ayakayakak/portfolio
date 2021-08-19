@@ -36,16 +36,16 @@ const Wrapper = styled.li<StyleProps>`
     transition: 0.3s all;
   }
 
-  ${
-    (props) => props.isDesktop && `
+  ${(props) =>
+    props.isDesktop &&
+    `
       &:hover {
         &::after {
           width: 100%;
           left: 0;
         }
       } 
-    `
-  }
+    `}
 
   ${mediaTablet`
     font-size: 14px;

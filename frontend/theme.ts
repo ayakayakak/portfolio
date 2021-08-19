@@ -7,6 +7,8 @@ export const theme = {
   borderGray: '#ccc',
   placeholderGray: '#ccc',
   error: '#eb5757',
+  success: '#24be98',
+  error: '#e34b4d',
 } as const
 
 type Theme = typeof theme

@@ -12,6 +12,7 @@ import { validateEmail, validateRequired } from 'lib/validate'
 
 type Props = {
   className?: string
+  onClickSubmit: () => void
 }
 
 const Wrapper = styled.div`
@@ -55,7 +56,7 @@ const FormItemWrapper = styled.div`
   `}
 `
 
-export const Contact: NextComponentType<NextPageContext, null, Props> = ({ className = '' }) => {
+export const Contact: NextComponentType<NextPageContext, null, Props> = ({ className = '', onClickSubmit }) => {
   const [name, setName] = useState<string>('')
   const [email, setEmail] = useState<string>('')
   const [body, setBody] = useState<string>('')
@@ -84,9 +85,9 @@ export const Contact: NextComponentType<NextPageContext, null, Props> = ({ class
     return true
   }
 
-  const onSubmit = (): void => {
+  const submit = (): void => {
+    onClickSubmit()
     if(validate()) {
-      console.log('submit')
     }
   }
 
@@ -138,7 +139,7 @@ export const Contact: NextComponentType<NextPageContext, null, Props> = ({ class
         />
         {!!bodyError && <ErrorText text={bodyError} />}
       </FormItemWrapper>
-      <Button onClick={onSubmit} className="send">
+      <Button onClick={submit} className="send">
         Send Message
       </Button>
     </Wrapper>

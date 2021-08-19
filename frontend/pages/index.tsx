@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 
 /* components */
-import { Header, SectionContainer, Top, About, Skill, Contact } from 'components/organisms'
+import { Header, SectionContainer, Top, About, Skill, Contact, Footer } from 'components/organisms'
 
 /* const */
 import { APP_NAME, APP_URL, META_DESCRIPTION } from 'const'
@@ -38,6 +38,7 @@ const Home: NextPage = () => {
           <Contact />
         </SectionContainer>
       </main>
+      <Footer />
     </>
   )
 }

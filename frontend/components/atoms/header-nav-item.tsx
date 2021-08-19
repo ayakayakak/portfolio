@@ -55,7 +55,7 @@ const Wrapper = styled.li<StyleProps>`
 export const HeaderNavItem: NextComponentType<NextPageContext, null, Props> = ({ className = '', text, onClick }) => {
   return (
     <Wrapper className={className} onClick={() => onClick(text)} isDesktop={isDesktop}>
-      {text}
+      {isDesktop}{text}
     </Wrapper>
   )
 }

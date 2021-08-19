@@ -70,7 +70,7 @@ export const About: NextComponentType<NextPageContext, null, Props> = ({ classNa
         <br />
         Nuxt.jsを用いたシステム開発・運用(3年)
         <br />
-        React Nativeを用いたiOS/Androidアプリ開発・運用(3年)
+        React Native + Expoを用いたiOS/Androidアプリ開発・運用(3年)
         <br />
         React.jsを用いたシステム開発・運用(2年)
         <br />

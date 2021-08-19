@@ -3,11 +3,12 @@ import { NextComponentType, NextPageContext } from 'next'
 import styled from 'styled-components'
 
 /* components */
-import { Button, ErrorText, SnsIcon } from 'components/atoms'
+import { Button, ErrorText, SnsIcon,TextInput, Textarea } from 'components/atoms'
 import { TextInputWithLabel, TextAreaWithLabel } from 'components/molecules'
 
 /* lib*/
 import { mediaTablet } from 'lib/media-query'
+import { validateEmail, validateRequired } from 'lib/validate'
 
 type Props = {
   className?: string
@@ -58,9 +59,9 @@ export const Contact: NextComponentType<NextPageContext, null, Props> = ({ class
   const [name, setName] = useState<string>('')
   const [email, setEmail] = useState<string>('')
   const [body, setBody] = useState<string>('')
-  const [isNameEmpty, setIsNameEmpty] = useState<boolean>(false)
-  const [isEmailEmpty, setIsEmailEmpty] = useState<boolean>(false)
-  const [isBodyEmpty, setIsBodyEmpty] = useState<boolean>(false)
+  const [nameError, setNameError] = useState<string | null>(null)
+  const [emailError, setEmailError] = useState<string | null>(null)
+  const [bodyError, setBodyError] = useState<string | null>(null)
 
   const onClickTwitter = (): void => {
     window.open('https://twitter.com/ayakayakayakak')
@@ -70,21 +71,23 @@ export const Contact: NextComponentType<NextPageContext, null, Props> = ({ class
     window.open('https://github.com/ayakayakak')
   }
 
-  const validation = (): void => {
-    if (!name) {
-      setIsNameEmpty(true)
-    }
-    if (!email) {
-      setIsEmailEmpty(true)
-    }
-    if (!body) {
-      setIsBodyEmpty(true)
-    }
+  const validate = (): boolean => {
+    const nameError = validateRequired(name)
+    const emailError = validateEmail(email)
+    const bodyError = validateRequired(body)
+    setNameError(nameError)
+    setEmailError(emailError)
+    setBodyError(bodyError)
+
+    if(nameError || emailError || bodyError) return false
+
+    return true
   }
 
   const onSubmit = (): void => {
-    validation()
-    console.log('submit')
+    if(validate()) {
+      console.log('submit')
+    }
   }
 
   return (
@@ -99,44 +102,41 @@ export const Contact: NextComponentType<NextPageContext, null, Props> = ({ class
         <SnsIcon src="/icon/github.png" alt="github" onClick={onClickGithub} />
       </div>
       <FormItemWrapper>
-        <TextInputWithLabel
-          label="Name"
+        <TextInput
           name="name"
           value={name}
-          placeholder="山田太郎"
-          error={isNameEmpty}
+          placeholder="Name"
+          error={!!nameError}
           onChange={(e) => {
             setName(e.target.value)
           }}
         />
-        {isNameEmpty && <ErrorText text="お名前が入力されていません" />}
+        {!!nameError && <ErrorText text={nameError} />}
       </FormItemWrapper>
       <FormItemWrapper>
-        <TextInputWithLabel
-          label="Email"
+        <TextInput
           name="email"
           type="email"
           value={email}
-          placeholder="example@gmail.com"
-          error={isEmailEmpty}
+          placeholder="Email"
+          error={!!emailError}
           onChange={(e) => {
             setEmail(e.target.value)
           }}
         />
-        {isEmailEmpty && <ErrorText text="メールアドレスが入力されていません" />}
+        {!!emailError && <ErrorText text={emailError} />}
       </FormItemWrapper>
       <FormItemWrapper>
-        <TextAreaWithLabel
-          label="Message"
+        <Textarea
           name="body"
           value={body}
-          placeholder="お問い合わせ"
-          error={isBodyEmpty}
+          placeholder="Message"
+          error={!!bodyError}
           onChange={(e) => {
             setBody(e.target.value)
           }}
         />
-        {isBodyEmpty && <ErrorText text="お問い合わせ内容が入力されていません" />}
+        {!!bodyError && <ErrorText text={bodyError} />}
       </FormItemWrapper>
       <Button onClick={onSubmit} className="send">
         Send Message

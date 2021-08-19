@@ -49,8 +49,20 @@ const Wrapper = styled.footer`
   }
 
   ${mediaSp`
-    .inner {
-      padding: 20px;
+    margin-top: 35px;
+
+    .go-to-top {
+      width: 80px;
+      height: 80px;
+      top: -35px;
+      left: calc(50% - 40px);
+
+      .arrow {
+        width: 25px;
+        height: 25px;
+        top: 30px;
+        left: calc(50% - 12px);
+      }
     }
   `}
 `

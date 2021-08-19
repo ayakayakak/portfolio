@@ -6,7 +6,7 @@ export const theme = {
   backgroundGray: '#f7f7f7',
   borderGray: '#ccc',
   placeholderGray: '#ccc',
-  error: '#eb5757',
+  footerBackground: '#4c4c4c',
   success: '#24be98',
   error: '#e34b4d',
 } as const

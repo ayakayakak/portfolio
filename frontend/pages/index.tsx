@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import smoothscroll from 'smoothscroll-polyfill'
 
 /* components */
 import { FlashMessage } from 'components/molecules'
@@ -20,6 +21,10 @@ const Home: NextPage = () => {
       setFlashMessageType(null)
     }, 3000)
   }
+
+  useEffect(() => {
+    smoothscroll.polyfill()
+  }, [])
 
   return (
     <>

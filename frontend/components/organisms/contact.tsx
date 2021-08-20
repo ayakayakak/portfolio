@@ -11,7 +11,7 @@ import { validateEmail, validateRequired } from 'lib/validate'
 
 type Props = {
   className?: string
-  onClickSubmit: (name:string, email:string, body:string) => void
+  onClickSubmit: (name: string, email: string, body: string) => void
 }
 
 const Wrapper = styled.div`

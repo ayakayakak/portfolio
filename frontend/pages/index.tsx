@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import smoothscroll from 'smoothscroll-polyfill'
-import emailjs, { init } from 'emailjs-com';
+import emailjs, { init } from 'emailjs-com'
 
 /* components */
 import { FlashMessage } from 'components/molecules'
@@ -15,24 +15,27 @@ import { FlashMessageType } from 'types/myTypes'
 const Home: NextPage = () => {
   const [flashMessageType, setFlashMessageType] = useState<FlashMessageType | null>(null)
 
-  const onClickSubmit = (name:string, email:string, body:string): void => {
-      init(process.env.EMAILJS_USER_ID ?? '')
+  const onClickSubmit = (name: string, email: string, body: string): void => {
+    init(process.env.EMAILJS_USER_ID ?? '')
 
-      const emailjsServiceId = process.env.EMAILJS_SERVICE_ID ?? ''
-      const emailjsTemplateId = process.env.EMAILJS_TEMPLATE_ID ?? ''
+    const emailjsServiceId = process.env.EMAILJS_SERVICE_ID ?? ''
+    const emailjsTemplateId = process.env.EMAILJS_TEMPLATE_ID ?? ''
 
-      const templateParams = {
-          name,
-          email,
-          body
-      }
+    const templateParams = {
+      name,
+      email,
+      body,
+    }
 
-      emailjs.send(emailjsServiceId,emailjsTemplateId, templateParams).
-      then(()=>{
+    emailjs
+      .send(emailjsServiceId, emailjsTemplateId, templateParams)
+      .then(() => {
         setFlashMessageType('success')
-      }).catch(() => {
+      })
+      .catch(() => {
         setFlashMessageType('fail')
-      }).finally(() => {
+      })
+      .finally(() => {
         setTimeout(() => {
           setFlashMessageType(null)
         }, 3000)

@@ -10,5 +10,6 @@ import { Label } from './label'
 import { Button } from './button'
 import { ErrorText } from './error-text'
 import { SnsIcon } from './sns-icon'
+import { Loading } from './loading'
 
-export { HeaderNavItem, SectionTitle, TextInput, Textarea, Label, Button, ErrorText, SnsIcon }
+export { HeaderNavItem, SectionTitle, TextInput, Textarea, Label, Button, ErrorText, SnsIcon, Loading }

@@ -5,6 +5,7 @@ import smoothscroll from 'smoothscroll-polyfill'
 import emailjs, { init } from 'emailjs-com'
 
 /* components */
+import { Loading } from 'components/atoms'
 import { FlashMessage } from 'components/molecules'
 import { Header, SectionContainer, Top, About, Skill, Contact, Footer } from 'components/organisms'
 
@@ -13,9 +14,11 @@ import { APP_NAME, APP_URL, META_DESCRIPTION } from 'const'
 import { FlashMessageType } from 'types/myTypes'
 
 const Home: NextPage = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(false)
   const [flashMessageType, setFlashMessageType] = useState<FlashMessageType | null>(null)
 
   const onClickSubmit = (name: string, email: string, body: string): void => {
+    setIsLoading(true)
     init(process.env.NEXT_PUBLIC_EMAILJS_USER_ID ?? '')
 
     const emailjsServiceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? ''
@@ -36,6 +39,7 @@ const Home: NextPage = () => {
         setFlashMessageType('fail')
       })
       .finally(() => {
+        setIsLoading(false)
         setTimeout(() => {
           setFlashMessageType(null)
         }, 3000)
@@ -60,6 +64,7 @@ const Home: NextPage = () => {
         <meta name="twitter:site" content="@ayakayakayakak" />
       </Head>
 
+      {!!isLoading && <Loading />}
       {!!flashMessageType && <FlashMessage type={flashMessageType} />}
       <Header />
       <main>

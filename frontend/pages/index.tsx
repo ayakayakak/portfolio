@@ -24,7 +24,7 @@ const Home: NextPage = () => {
     const templateParams = {
       name,
       email,
-      body,
+      body: body.replace(/\r?\n/g, '<br/>'),
     }
 
     emailjs

@@ -1,11 +1,10 @@
 import React from 'react'
 import { NextComponentType, NextPageContext } from 'next'
 import styled from 'styled-components'
-import { isDesktop } from 'react-device-detect'
 
 /* lib, types */
 import { SectionList } from 'types/myTypes'
-import { mediaTablet } from 'lib/media-query'
+import { mediaTablet, mediaPc } from 'lib/media-query'
 
 type Props = {
   className?: string
@@ -13,11 +12,7 @@ type Props = {
   onClick: (text: SectionList) => void
 }
 
-type StyleProps = {
-  isDesktop: boolean
-}
-
-const Wrapper = styled.li<StyleProps>`
+const Wrapper = styled.li`
   padding: 5px 0;
   font-size: 18px;
   font-weight: bold;
@@ -36,16 +31,14 @@ const Wrapper = styled.li<StyleProps>`
     transition: 0.3s all;
   }
 
-  ${(props) =>
-    props.isDesktop &&
-    `
-      &:hover {
-        &::after {
-          width: 100%;
-          left: 0;
-        }
-      } 
-    `}
+  ${mediaPc`
+    &:hover {
+      &::after {
+        width: 100%;
+        left: 0;
+      }
+    }
+  `}
 
   ${mediaTablet`
     font-size: 14px;
@@ -54,8 +47,7 @@ const Wrapper = styled.li<StyleProps>`
 
 export const HeaderNavItem: NextComponentType<NextPageContext, null, Props> = ({ className = '', text, onClick }) => {
   return (
-    <Wrapper className={className} onClick={() => onClick(text)} isDesktop={isDesktop}>
-      {!!isDesktop ? 'true' : 'false'}
+    <Wrapper className={className} onClick={() => onClick(text)}>
       {text}
     </Wrapper>
   )

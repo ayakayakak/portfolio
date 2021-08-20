@@ -16,10 +16,10 @@ const Home: NextPage = () => {
   const [flashMessageType, setFlashMessageType] = useState<FlashMessageType | null>(null)
 
   const onClickSubmit = (name: string, email: string, body: string): void => {
-    init(process.env.EMAILJS_USER_ID ?? '')
+    init(process.env.NEXT_PUBLIC_EMAILJS_USER_ID ?? '')
 
-    const emailjsServiceId = process.env.EMAILJS_SERVICE_ID ?? ''
-    const emailjsTemplateId = process.env.EMAILJS_TEMPLATE_ID ?? ''
+    const emailjsServiceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? ''
+    const emailjsTemplateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? ''
 
     const templateParams = {
       name,

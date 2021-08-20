@@ -11,7 +11,7 @@ import { validateEmail, validateRequired } from 'lib/validate'
 
 type Props = {
   className?: string
-  onClickSubmit: () => void
+  onClickSubmit: (name:string, email:string, body:string) => void
 }
 
 const Wrapper = styled.div`
@@ -85,8 +85,8 @@ export const Contact: NextComponentType<NextPageContext, null, Props> = ({ class
   }
 
   const submit = (): void => {
-    onClickSubmit()
     if (validate()) {
+      onClickSubmit(name, email, body)
     }
   }
 

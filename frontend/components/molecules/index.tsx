@@ -9,4 +9,16 @@ import { TextInputWithLabel } from './text-input-with-label'
 import { TextAreaWithLabel } from './textarea-with-label'
 import { FlashMessage } from './flash-message'
 
-export { HeaderNav, SkillItem, SkillLevel, TextInputWithLabel, TextAreaWithLabel, FlashMessage }
+/* tagiron */
+import { TagironNumberCards } from './tagiron/number-cards'
+
+export {
+  HeaderNav,
+  SkillItem,
+  SkillLevel,
+  TextInputWithLabel,
+  TextAreaWithLabel,
+  FlashMessage,
+  /* tagiron */
+  TagironNumberCards,
+}

@@ -12,4 +12,21 @@ import { ErrorText } from './error-text'
 import { SnsIcon } from './sns-icon'
 import { Loading } from './loading'
 
-export { HeaderNavItem, SectionTitle, TextInput, Textarea, Label, Button, ErrorText, SnsIcon, Loading }
+/* tagiron */
+import { TagironInputButton } from './tagiron/input-button'
+import { TagironNumberCard } from './tagiron/number-card'
+
+export {
+  HeaderNavItem,
+  SectionTitle,
+  TextInput,
+  Textarea,
+  Label,
+  Button,
+  ErrorText,
+  SnsIcon,
+  Loading,
+  /* tagiron */
+  TagironInputButton,
+  TagironNumberCard,
+}

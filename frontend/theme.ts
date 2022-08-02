@@ -9,6 +9,11 @@ export const theme = {
   footerBackground: '#4c4c4c',
   success: '#24be98',
   error: '#e34b4d',
+
+  /* tagiron */
+  disabledBackgroundGray: '#e8e8e8',
+  disabledTextGray: '#b8b8b8',
+  lightPink: '#f0f0f0',
 } as const
 
 type Theme = typeof theme

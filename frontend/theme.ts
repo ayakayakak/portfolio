@@ -8,7 +8,7 @@ export const theme = {
   placeholderGray: '#ccc',
   footerBackground: '#4c4c4c',
   success: '#24be98',
-  error: '#ccc',
+  error: '#e34b4a',
 
   /* tagiron */
   disabledBackgroundGray: '#e8e8e8',

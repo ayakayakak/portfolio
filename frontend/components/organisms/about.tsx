@@ -76,22 +76,22 @@ export const About: NextComponentType<NextPageContext, null, Props> = ({ classNa
           <br />
           ■実績
           <br />
-          Nuxt.jsを用いたシステム開発・運用(3年)
+          Nuxt.jsを用いたシステム開発・運用(2年)
           <br />
-          React Native + Expoを用いたiOS/Androidアプリ開発・運用(3年)
+          React Native + Expoを用いたiOS/Androidアプリ開発・運用(2年)
           <br />
-          React.jsを用いたシステム開発・運用(2年)
+          React.jsを用いたシステム開発・運用(3年)
           <br />
-          Next.jsを用いたシステム開発・運用(1年)
+          Next.jsを用いたシステム開発・運用(2年)
           <br />
           <br />
           ■保有資格
           <br />
-          LPIC1
+          Linux Professional Institute LPIC-1
           <br />
-          OracleBronze
+          ORACLE MASTER Bronze
           <br />
-          JavaSilver
+          Oracle Java Silver
         </p>
       </div>
     </Wrapper>
